@@ -1,0 +1,47 @@
+@use "quasar/src/css/variables" as q
+@use "sass:map"
+
+$space-3s: (x: 12px, y: 12px)
+$space-2l: (x: 32px, y: 32px)
+$space-10l: (x: 160px, y: 160px)
+
+$new-spaces: (
+3s: $space-3s,
+2l: $space-2l,
+10l: $space-10l
+)
+
+$spaces: map.merge(q.$spaces, $new-spaces)
+
+$primary: #1976D2
+$secondary: #26A69A
+$accent: #9C27B0
+
+$dark: #1D1D1D
+
+$positive: #21BA45
+$negative: #C10015
+$info: #31CCEC
+$warning: #F2C037
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  -webkit-font-smoothing: antialiased
+
+button:hover
+  cursor: pointer
+  opacity: 0.8
+  animation: 0.3s
+
+button
+  background: none
+  border: none
+  outline: none
+
+a
+  text-decoration: none
+  color: inherit
